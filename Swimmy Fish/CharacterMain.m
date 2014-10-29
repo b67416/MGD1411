@@ -9,20 +9,33 @@
 #import "CharacterMain.h"
 
 @implementation CharacterMain
+{
+    SKAction *actionRotate;
+    SKAction *sfxRotate;
+}
 
-+ (id)initWithCharacterSprite {
-    CharacterMain *characterMain = [CharacterMain spriteNodeWithImageNamed:@"mainCharacter"];
+- (id)initWithCharacter {
+    self = [super initWithImageNamed:@"mainCharacter"];
     
-    characterMain.userInteractionEnabled = YES;
+    if (self) {
+        /* Enable user to touch sprite */
+        
+        self.userInteractionEnabled = YES;
     
-    return characterMain;
+        /* Preload actions and SFX */
+        
+        actionRotate = [SKAction rotateToAngle:M_PI*2 duration:0.5];
+        sfxRotate = [SKAction playSoundFileNamed:@"fishWhack.mp3" waitForCompletion:YES];
+    }
+    
+    return self;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
     NSLog(@"Fish Touched");
+    [self runAction:[SKAction group:@[actionRotate, sfxRotate]]];
 }
-
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68A33EFD1A017C0800E60014 /* fishWhack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68A33EFC1A017C0800E60014 /* fishWhack.mp3 */; };
 		68FFCF431A01695D00C894F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF421A01695D00C894F4 /* main.m */; };
 		68FFCF461A01695D00C894F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF451A01695D00C894F4 /* AppDelegate.m */; };
 		68FFCF491A01695D00C894F4 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF481A01695D00C894F4 /* GameScene.m */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68A33EFC1A017C0800E60014 /* fishWhack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fishWhack.mp3; sourceTree = "<group>"; };
 		68FFCF3D1A01695D00C894F4 /* Swimmy Fish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swimmy Fish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FFCF411A01695D00C894F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68FFCF421A01695D00C894F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		68FFCF3F1A01695D00C894F4 /* Swimmy Fish */ = {
 			isa = PBXGroup;
 			children = (
+				68A33EFC1A017C0800E60014 /* fishWhack.mp3 */,
 				68FFCF731A0171D100C894F4 /* swim.mp3 */,
 				68FFCF441A01695D00C894F4 /* AppDelegate.h */,
 				68FFCF451A01695D00C894F4 /* AppDelegate.m */,
@@ -212,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A33EFD1A017C0800E60014 /* fishWhack.mp3 in Resources */,
 				68FFCF561A01695D00C894F4 /* LaunchScreen.xib in Resources */,
 				68FFCF531A01695D00C894F4 /* Images.xcassets in Resources */,
 				68FFCF741A0171D100C894F4 /* swim.mp3 in Resources */,
@@ -428,6 +432,7 @@
 				68FFCF671A01695E00C894F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68FFCF681A01695E00C894F4 /* Build configuration list for PBXNativeTarget "Swimmy FishTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +441,7 @@
 				68FFCF6A1A01695E00C894F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

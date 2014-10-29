@@ -23,7 +23,8 @@
     
     /* Setup the main character fish */
     
-    characterMain = [CharacterMain initWithCharacterSprite];
+    //characterMain = [CharacterMain initWithCharacterSprite];
+    characterMain = [[CharacterMain alloc] initWithCharacter];
     characterMain.position = CGPointMake(100, 100);
     characterMain.xScale = 0.25f;
     characterMain.yScale = 0.25f;

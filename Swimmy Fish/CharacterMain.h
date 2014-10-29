@@ -10,6 +10,6 @@
 
 @interface CharacterMain : SKSpriteNode
 
-+ (id)initWithCharacterSprite;
+- (id)initWithCharacter;
 
 @end
