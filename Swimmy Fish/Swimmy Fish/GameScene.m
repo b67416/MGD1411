@@ -8,6 +8,8 @@
 
 #import "GameScene.h"
 #import "CharacterMain.h"
+#import "Seaweed.h"
+#import "EnemyJellyFish.h"
 
 @implementation GameScene
 {
@@ -23,12 +25,32 @@
     
     /* Setup the main character fish */
     
-    //characterMain = [CharacterMain initWithCharacterSprite];
     characterMain = [[CharacterMain alloc] initWithCharacter];
+    characterMain.xScale = 0.25;
+    characterMain.yScale = 0.25;
     characterMain.position = CGPointMake(100, 100);
-    characterMain.xScale = 0.25f;
-    characterMain.yScale = 0.25f;
     [self addChild:characterMain];
+    
+    /* Setup the seaweed */
+    Seaweed *seaweedBottom = [[Seaweed alloc] initWithSeaweed];
+    seaweedBottom.xScale = 0.5;
+    seaweedBottom.yScale = 0.5;
+    seaweedBottom.position = CGPointMake(250, seaweedBottom.size.height / 2);
+    [self addChild:seaweedBottom];
+    
+    Seaweed *seaweedTop = [[Seaweed alloc] initWithSeaweed];
+    seaweedTop.xScale = -0.5;
+    seaweedTop.yScale = -0.5;
+    
+    seaweedTop.position = CGPointMake(350, self.view.bounds.size.height - (seaweedTop.size.height / 2));
+    [self addChild:seaweedTop];
+    
+    /* Setup the Enemy Jelly Fish */
+    EnemyJellyFish *enemyJellyFish = [[EnemyJellyFish alloc] initWithJellyFish];
+    enemyJellyFish.xScale = 0.25;
+    enemyJellyFish.yScale = 0.25;
+    enemyJellyFish.position = CGPointMake(500, 250);
+    [self addChild:enemyJellyFish];
     
     /* Preload the SFX */
     
