@@ -76,6 +76,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68A33F061A01AF9F00E60014 /* SFX */ = {
+			isa = PBXGroup;
+			children = (
+				68FFCF731A0171D100C894F4 /* swim.mp3 */,
+				68A33EFC1A017C0800E60014 /* fishWhack.mp3 */,
+			);
+			name = SFX;
+			sourceTree = "<group>";
+		};
+		68A33F071A01AFB800E60014 /* Character Class */ = {
+			isa = PBXGroup;
+			children = (
+				68A33F001A017D6D00E60014 /* Seaweed.h */,
+				68A33F011A017D6D00E60014 /* Seaweed.m */,
+				68A33F031A017F9700E60014 /* EnemyJellyFish.h */,
+				68A33F041A017F9700E60014 /* EnemyJellyFish.m */,
+				68FFCF6F1A016DCF00C894F4 /* CharacterMain.m */,
+				68FFCF6E1A016DCF00C894F4 /* CharacterMain.h */,
+			);
+			name = "Character Class";
+			sourceTree = "<group>";
+		};
+		68A33F081A01B00000E60014 /* Game Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				68FFCF471A01695D00C894F4 /* GameScene.h */,
+				68FFCF481A01695D00C894F4 /* GameScene.m */,
+			);
+			name = "Game Scenes";
+			sourceTree = "<group>";
+		};
 		68FFCF341A01695D00C894F4 = {
 			isa = PBXGroup;
 			children = (
@@ -97,24 +128,17 @@
 		68FFCF3F1A01695D00C894F4 /* Swimmy Fish */ = {
 			isa = PBXGroup;
 			children = (
-				68A33EFC1A017C0800E60014 /* fishWhack.mp3 */,
-				68FFCF731A0171D100C894F4 /* swim.mp3 */,
 				68FFCF441A01695D00C894F4 /* AppDelegate.h */,
 				68FFCF451A01695D00C894F4 /* AppDelegate.m */,
-				68FFCF6E1A016DCF00C894F4 /* CharacterMain.h */,
-				68FFCF6F1A016DCF00C894F4 /* CharacterMain.m */,
-				68FFCF471A01695D00C894F4 /* GameScene.h */,
-				68FFCF481A01695D00C894F4 /* GameScene.m */,
 				68FFCF4C1A01695D00C894F4 /* GameViewController.h */,
 				68FFCF4D1A01695D00C894F4 /* GameViewController.m */,
-				68FFCF4F1A01695D00C894F4 /* Main.storyboard */,
+				68A33F081A01B00000E60014 /* Game Scenes */,
+				68A33F071A01AFB800E60014 /* Character Class */,
 				68FFCF521A01695D00C894F4 /* Images.xcassets */,
+				68A33F061A01AF9F00E60014 /* SFX */,
+				68FFCF4F1A01695D00C894F4 /* Main.storyboard */,
 				68FFCF541A01695D00C894F4 /* LaunchScreen.xib */,
 				68FFCF401A01695D00C894F4 /* Supporting Files */,
-				68A33F001A017D6D00E60014 /* Seaweed.h */,
-				68A33F011A017D6D00E60014 /* Seaweed.m */,
-				68A33F031A017F9700E60014 /* EnemyJellyFish.h */,
-				68A33F041A017F9700E60014 /* EnemyJellyFish.m */,
 			);
 			path = "Swimmy Fish";
 			sourceTree = "<group>";

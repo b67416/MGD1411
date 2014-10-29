@@ -10,8 +10,8 @@
 
 @implementation CharacterMain
 {
-    SKAction *actionRotate;
-    SKAction *sfxRotate;
+    SKAction *actionFishWhack;
+    SKAction *sfxFishWhack;
 }
 
 - (id)initWithCharacter {
@@ -21,11 +21,17 @@
         /* Enable user to touch sprite */
         
         self.userInteractionEnabled = YES;
+        
+        /* Setup the scaling */
+        self.xScale = .25;
+        self.yScale = .25;
     
         /* Preload actions and SFX */
         
-        actionRotate = [SKAction rotateToAngle:M_PI*2 duration:0.5];
-        sfxRotate = [SKAction playSoundFileNamed:@"fishWhack.mp3" waitForCompletion:YES];
+        actionFishWhack = [SKAction sequence:@[[SKAction scaleXTo:-(self.xScale) duration:.25],
+                                               [SKAction scaleXTo:self.xScale duration:.25]]];
+                           
+        sfxFishWhack = [SKAction playSoundFileNamed:@"fishWhack.mp3" waitForCompletion:YES];
     }
     
     return self;
@@ -34,8 +40,9 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
-    NSLog(@"Fish Touched");
-    [self runAction:[SKAction group:@[actionRotate, sfxRotate]]];
+    if (self.hasActions == NO) {
+        [self runAction:[SKAction group:@[actionFishWhack, sfxFishWhack]]];
+    }
 }
 
 @end

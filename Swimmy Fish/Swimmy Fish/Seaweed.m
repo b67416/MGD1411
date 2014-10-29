@@ -13,6 +13,10 @@
 - (id)initWithSeaweed {
     self = [super initWithImageNamed:@"Seaweed.png"];
     
+    /* Setup the scaling */
+    self.xScale = .5;
+    self.yScale = .5;
+    
     return self;
 }
 

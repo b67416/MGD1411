@@ -13,6 +13,10 @@
 - (id)initWithJellyFish {
     self = [super initWithImageNamed:@"JellyFish.png"];
     
+    /* Setup the scaling */
+    self.xScale = .25;
+    self.yScale = .25;
+    
     return self;
 }
 

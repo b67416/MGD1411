@@ -23,34 +23,37 @@
     self.backgroundColor = [SKColor colorWithRed:0.4f green:0.6f blue:1.0f alpha:1.0f];
     
     
+    
     /* Setup the main character fish */
     
     characterMain = [[CharacterMain alloc] initWithCharacter];
-    characterMain.xScale = 0.25;
-    characterMain.yScale = 0.25;
     characterMain.position = CGPointMake(100, 100);
     [self addChild:characterMain];
     
+    
+    
     /* Setup the seaweed */
+    
     Seaweed *seaweedBottom = [[Seaweed alloc] initWithSeaweed];
-    seaweedBottom.xScale = 0.5;
-    seaweedBottom.yScale = 0.5;
     seaweedBottom.position = CGPointMake(250, seaweedBottom.size.height / 2);
     [self addChild:seaweedBottom];
     
     Seaweed *seaweedTop = [[Seaweed alloc] initWithSeaweed];
-    seaweedTop.xScale = -0.5;
-    seaweedTop.yScale = -0.5;
-    
+    seaweedTop.xScale = -(seaweedTop.xScale);
+    seaweedTop.yScale = -(seaweedTop.yScale);
+
     seaweedTop.position = CGPointMake(350, self.view.bounds.size.height - (seaweedTop.size.height / 2));
     [self addChild:seaweedTop];
     
+    
+
     /* Setup the Enemy Jelly Fish */
+    
     EnemyJellyFish *enemyJellyFish = [[EnemyJellyFish alloc] initWithJellyFish];
-    enemyJellyFish.xScale = 0.25;
-    enemyJellyFish.yScale = 0.25;
     enemyJellyFish.position = CGPointMake(500, 250);
     [self addChild:enemyJellyFish];
+    
+    
     
     /* Preload the SFX */
     
@@ -61,6 +64,7 @@
     /* Called when a touch begins */
     
     /* Play the swim up sound when user touches the screen */
+    
     [self runAction:sfxSwimUp];
 }
 
