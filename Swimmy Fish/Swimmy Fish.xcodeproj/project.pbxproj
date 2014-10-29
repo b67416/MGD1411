@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68FFCF431A01695D00C894F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF421A01695D00C894F4 /* main.m */; };
+		68FFCF461A01695D00C894F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF451A01695D00C894F4 /* AppDelegate.m */; };
+		68FFCF491A01695D00C894F4 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF481A01695D00C894F4 /* GameScene.m */; };
+		68FFCF4E1A01695D00C894F4 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF4D1A01695D00C894F4 /* GameViewController.m */; };
+		68FFCF511A01695D00C894F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68FFCF4F1A01695D00C894F4 /* Main.storyboard */; };
+		68FFCF531A01695D00C894F4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68FFCF521A01695D00C894F4 /* Images.xcassets */; };
+		68FFCF561A01695D00C894F4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FFCF541A01695D00C894F4 /* LaunchScreen.xib */; };
+		68FFCF621A01695D00C894F4 /* Swimmy_FishTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF611A01695D00C894F4 /* Swimmy_FishTests.m */; };
+		68FFCF701A016DCF00C894F4 /* CharacterMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF6F1A016DCF00C894F4 /* CharacterMain.m */; };
+		68FFCF741A0171D100C894F4 /* swim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68FFCF731A0171D100C894F4 /* swim.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		68FFCF5C1A01695D00C894F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68FFCF351A01695D00C894F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68FFCF3C1A01695D00C894F4;
+			remoteInfo = "Swimmy Fish";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		68FFCF3D1A01695D00C894F4 /* Swimmy Fish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swimmy Fish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68FFCF411A01695D00C894F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68FFCF421A01695D00C894F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		68FFCF441A01695D00C894F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		68FFCF451A01695D00C894F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		68FFCF471A01695D00C894F4 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		68FFCF481A01695D00C894F4 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		68FFCF4C1A01695D00C894F4 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		68FFCF4D1A01695D00C894F4 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		68FFCF501A01695D00C894F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68FFCF521A01695D00C894F4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		68FFCF551A01695D00C894F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		68FFCF5B1A01695D00C894F4 /* Swimmy FishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swimmy FishTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68FFCF601A01695D00C894F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68FFCF611A01695D00C894F4 /* Swimmy_FishTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Swimmy_FishTests.m; sourceTree = "<group>"; };
+		68FFCF6E1A016DCF00C894F4 /* CharacterMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CharacterMain.h; path = ../CharacterMain.h; sourceTree = "<group>"; };
+		68FFCF6F1A016DCF00C894F4 /* CharacterMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CharacterMain.m; path = ../CharacterMain.m; sourceTree = "<group>"; };
+		68FFCF731A0171D100C894F4 /* swim.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = swim.mp3; path = ../swim.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68FFCF3A1A01695D00C894F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68FFCF581A01695D00C894F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68FFCF341A01695D00C894F4 = {
+			isa = PBXGroup;
+			children = (
+				68FFCF3F1A01695D00C894F4 /* Swimmy Fish */,
+				68FFCF5E1A01695D00C894F4 /* Swimmy FishTests */,
+				68FFCF3E1A01695D00C894F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		68FFCF3E1A01695D00C894F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68FFCF3D1A01695D00C894F4 /* Swimmy Fish.app */,
+				68FFCF5B1A01695D00C894F4 /* Swimmy FishTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68FFCF3F1A01695D00C894F4 /* Swimmy Fish */ = {
+			isa = PBXGroup;
+			children = (
+				68FFCF731A0171D100C894F4 /* swim.mp3 */,
+				68FFCF441A01695D00C894F4 /* AppDelegate.h */,
+				68FFCF451A01695D00C894F4 /* AppDelegate.m */,
+				68FFCF6E1A016DCF00C894F4 /* CharacterMain.h */,
+				68FFCF6F1A016DCF00C894F4 /* CharacterMain.m */,
+				68FFCF471A01695D00C894F4 /* GameScene.h */,
+				68FFCF481A01695D00C894F4 /* GameScene.m */,
+				68FFCF4C1A01695D00C894F4 /* GameViewController.h */,
+				68FFCF4D1A01695D00C894F4 /* GameViewController.m */,
+				68FFCF4F1A01695D00C894F4 /* Main.storyboard */,
+				68FFCF521A01695D00C894F4 /* Images.xcassets */,
+				68FFCF541A01695D00C894F4 /* LaunchScreen.xib */,
+				68FFCF401A01695D00C894F4 /* Supporting Files */,
+			);
+			path = "Swimmy Fish";
+			sourceTree = "<group>";
+		};
+		68FFCF401A01695D00C894F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68FFCF411A01695D00C894F4 /* Info.plist */,
+				68FFCF421A01695D00C894F4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		68FFCF5E1A01695D00C894F4 /* Swimmy FishTests */ = {
+			isa = PBXGroup;
+			children = (
+				68FFCF611A01695D00C894F4 /* Swimmy_FishTests.m */,
+				68FFCF5F1A01695D00C894F4 /* Supporting Files */,
+			);
+			path = "Swimmy FishTests";
+			sourceTree = "<group>";
+		};
+		68FFCF5F1A01695D00C894F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				68FFCF601A01695D00C894F4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68FFCF3C1A01695D00C894F4 /* Swimmy Fish */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68FFCF651A01695E00C894F4 /* Build configuration list for PBXNativeTarget "Swimmy Fish" */;
+			buildPhases = (
+				68FFCF391A01695D00C894F4 /* Sources */,
+				68FFCF3A1A01695D00C894F4 /* Frameworks */,
+				68FFCF3B1A01695D00C894F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Swimmy Fish";
+			productName = "Swimmy Fish";
+			productReference = 68FFCF3D1A01695D00C894F4 /* Swimmy Fish.app */;
+			productType = "com.apple.product-type.application";
+		};
+		68FFCF5A1A01695D00C894F4 /* Swimmy FishTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68FFCF681A01695E00C894F4 /* Build configuration list for PBXNativeTarget "Swimmy FishTests" */;
+			buildPhases = (
+				68FFCF571A01695D00C894F4 /* Sources */,
+				68FFCF581A01695D00C894F4 /* Frameworks */,
+				68FFCF591A01695D00C894F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				68FFCF5D1A01695D00C894F4 /* PBXTargetDependency */,
+			);
+			name = "Swimmy FishTests";
+			productName = "Swimmy FishTests";
+			productReference = 68FFCF5B1A01695D00C894F4 /* Swimmy FishTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68FFCF351A01695D00C894F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Ryan Wahle";
+				TargetAttributes = {
+					68FFCF3C1A01695D00C894F4 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					68FFCF5A1A01695D00C894F4 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 68FFCF3C1A01695D00C894F4;
+					};
+				};
+			};
+			buildConfigurationList = 68FFCF381A01695D00C894F4 /* Build configuration list for PBXProject "Swimmy Fish" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68FFCF341A01695D00C894F4;
+			productRefGroup = 68FFCF3E1A01695D00C894F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68FFCF3C1A01695D00C894F4 /* Swimmy Fish */,
+				68FFCF5A1A01695D00C894F4 /* Swimmy FishTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68FFCF3B1A01695D00C894F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68FFCF561A01695D00C894F4 /* LaunchScreen.xib in Resources */,
+				68FFCF531A01695D00C894F4 /* Images.xcassets in Resources */,
+				68FFCF741A0171D100C894F4 /* swim.mp3 in Resources */,
+				68FFCF511A01695D00C894F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68FFCF591A01695D00C894F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68FFCF391A01695D00C894F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68FFCF4E1A01695D00C894F4 /* GameViewController.m in Sources */,
+				68FFCF461A01695D00C894F4 /* AppDelegate.m in Sources */,
+				68FFCF491A01695D00C894F4 /* GameScene.m in Sources */,
+				68FFCF431A01695D00C894F4 /* main.m in Sources */,
+				68FFCF701A016DCF00C894F4 /* CharacterMain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68FFCF571A01695D00C894F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68FFCF621A01695D00C894F4 /* Swimmy_FishTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		68FFCF5D1A01695D00C894F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68FFCF3C1A01695D00C894F4 /* Swimmy Fish */;
+			targetProxy = 68FFCF5C1A01695D00C894F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		68FFCF4F1A01695D00C894F4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68FFCF501A01695D00C894F4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		68FFCF541A01695D00C894F4 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68FFCF551A01695D00C894F4 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68FFCF631A01695D00C894F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		68FFCF641A01695E00C894F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68FFCF661A01695E00C894F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Swimmy Fish/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		68FFCF671A01695E00C894F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Swimmy Fish/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		68FFCF691A01695E00C894F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Swimmy FishTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swimmy Fish.app/Swimmy Fish";
+			};
+			name = Debug;
+		};
+		68FFCF6A1A01695E00C894F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Swimmy FishTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swimmy Fish.app/Swimmy Fish";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68FFCF381A01695D00C894F4 /* Build configuration list for PBXProject "Swimmy Fish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68FFCF631A01695D00C894F4 /* Debug */,
+				68FFCF641A01695E00C894F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68FFCF651A01695E00C894F4 /* Build configuration list for PBXNativeTarget "Swimmy Fish" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68FFCF661A01695E00C894F4 /* Debug */,
+				68FFCF671A01695E00C894F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		68FFCF681A01695E00C894F4 /* Build configuration list for PBXNativeTarget "Swimmy FishTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68FFCF691A01695E00C894F4 /* Debug */,
+				68FFCF6A1A01695E00C894F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68FFCF351A01695D00C894F4 /* Project object */;
+}
