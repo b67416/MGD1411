@@ -38,7 +38,7 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
+    /* Spin the fish sprite and play SFX */
     
     if (self.hasActions == NO) {
         [self runAction:[SKAction group:@[actionFishWhack, sfxFishWhack]]];

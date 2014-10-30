@@ -61,15 +61,18 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
-    
     /* Play the swim up sound when user touches the screen */
     
     [self runAction:sfxSwimUp];
+    
+    SKAction *move = [SKAction moveByX:20 y:20 duration:.25];
+    [characterMain runAction:move];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+    /* Keep the main fish moving down if not off the screen */
+    
+    [characterMain runAction:[SKAction moveByX:0 y:-.75 duration:1/60]];
 }
 
 @end
