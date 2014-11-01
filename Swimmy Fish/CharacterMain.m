@@ -32,6 +32,13 @@
                                                [SKAction scaleXTo:self.xScale duration:.25]]];
                            
         sfxFishWhack = [SKAction playSoundFileNamed:@"fishWhack.mp3" waitForCompletion:YES];
+        
+        /* Some Physics Tests */
+        self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.size.width, self.size.height)];
+        self.physicsBody.dynamic = YES;
+        self.physicsBody.mass = 80;
+        self.physicsBody.collisionBitMask = 1;
+        self.physicsBody.allowsRotation = NO;
     }
     
     return self;

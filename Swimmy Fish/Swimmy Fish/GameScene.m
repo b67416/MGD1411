@@ -15,12 +15,38 @@
 {
     CharacterMain *characterMain;
     SKAction *sfxSwimUp;
+    
+    BOOL isCharacterAccelerating;
 }
 
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
     
     self.backgroundColor = [SKColor colorWithRed:0.4f green:0.6f blue:1.0f alpha:1.0f];
+    
+    
+    
+    /* Some Physics Tests */
+    
+    self.physicsWorld.gravity = CGVectorMake(0, -1);
+    
+    SKNode *worldBottomBoundryNode = [SKNode node];
+    worldBottomBoundryNode.position = CGPointMake(0, 0);
+    worldBottomBoundryNode.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 30) toPoint:CGPointMake(self.size.width, 30)];
+    worldBottomBoundryNode.physicsBody.collisionBitMask = 1;
+    [self addChild:worldBottomBoundryNode];
+    
+    SKNode *worldTopBoundryNode = [SKNode node];
+    worldTopBoundryNode.position = CGPointMake(0, 0);
+    worldTopBoundryNode.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, self.size.height - 30) toPoint:CGPointMake(self.size.width, self.size.height - 30)];
+    worldTopBoundryNode.physicsBody.collisionBitMask = 1;
+    [self addChild:worldTopBoundryNode];
+    
+    isCharacterAccelerating = NO;
+    
+    UILongPressGestureRecognizer *pressDetection = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(userPressedScreen:)];
+    pressDetection.minimumPressDuration = 0.1;
+    [view addGestureRecognizer:pressDetection];
     
     
     
@@ -41,7 +67,6 @@
     Seaweed *seaweedTop = [[Seaweed alloc] initWithSeaweed];
     seaweedTop.xScale = -(seaweedTop.xScale);
     seaweedTop.yScale = -(seaweedTop.yScale);
-
     seaweedTop.position = CGPointMake(350, self.view.bounds.size.height - (seaweedTop.size.height / 2));
     [self addChild:seaweedTop];
     
@@ -60,19 +85,26 @@
     sfxSwimUp = [SKAction playSoundFileNamed:@"swim.mp3" waitForCompletion:YES];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Play the swim up sound when user touches the screen */
+-(void)userPressedScreen:(UITapGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        isCharacterAccelerating = YES;
+        NSLog(@"Started");
+    }
     
-    [self runAction:sfxSwimUp];
-    
-    SKAction *move = [SKAction moveByX:20 y:20 duration:.25];
-    [characterMain runAction:move];
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        isCharacterAccelerating = NO;
+        NSLog(@"Stopped");
+    }
 }
 
--(void)update:(CFTimeInterval)currentTime {
-    /* Keep the main fish moving down if not off the screen */
-    
-    [characterMain runAction:[SKAction moveByX:0 y:-.75 duration:1/60]];
+-(void)update:(NSTimeInterval)currentTime {
+    if (isCharacterAccelerating == YES) {
+        [characterMain.physicsBody applyForce:CGVectorMake(12000, 80000)];
+        
+        if (self.hasActions == NO) {
+            [self runAction:sfxSwimUp];
+        }
+    }
 }
 
 @end
