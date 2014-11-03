@@ -10,12 +10,29 @@
 
 @implementation Seaweed
 
-- (id)initWithSeaweed {
-    self = [super initWithImageNamed:@"Seaweed.png"];
+- (id)initWithSeaweedBottom {
+    return [self initWithSeaweed:NO];
+}
+
+- (id)initWithSeaweedTop {
+    return [self initWithSeaweed:YES];
+}
+
+- (id)initWithSeaweed:(BOOL)isFlipped {
+    if (isFlipped) {
+        self = [super initWithImageNamed:@"Seaweed-Top.png"];
+    } else {
+        self = [super initWithImageNamed:@"Seaweed-Bottom.png"];
+    }
     
-    /* Setup the scaling */
-    self.xScale = .5;
-    self.yScale = .5;
+    
+    // Setup Physics //
+    
+    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+    self.physicsBody.dynamic = NO;
+    self.physicsBody.mass = 0;
+    self.physicsBody.collisionBitMask = 1;
+    self.physicsBody.allowsRotation = NO;
     
     return self;
 }

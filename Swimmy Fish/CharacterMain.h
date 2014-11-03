@@ -11,5 +11,6 @@
 @interface CharacterMain : SKSpriteNode
 
 - (id)initWithCharacter;
+- (void)whack;
 
 @end

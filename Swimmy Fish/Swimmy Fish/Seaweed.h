@@ -10,6 +10,8 @@
 
 @interface Seaweed : SKSpriteNode
 
-- (id)initWithSeaweed;
+- (id)initWithSeaweed:(BOOL)isFlipped;
+- (id)initWithSeaweedBottom;
+- (id)initWithSeaweedTop;
 
 @end

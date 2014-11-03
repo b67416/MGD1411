@@ -18,25 +18,20 @@
     self = [super initWithImageNamed:@"mainCharacter"];
     
     if (self) {
-        /* Enable user to touch sprite */
-        
-        self.userInteractionEnabled = YES;
-        
-        /* Setup the scaling */
-        self.xScale = .25;
-        self.yScale = .25;
-    
-        /* Preload actions and SFX */
+        // Preload actions and SFX //
         
         actionFishWhack = [SKAction sequence:@[[SKAction scaleXTo:-(self.xScale) duration:.25],
                                                [SKAction scaleXTo:self.xScale duration:.25]]];
                            
         sfxFishWhack = [SKAction playSoundFileNamed:@"fishWhack.mp3" waitForCompletion:YES];
         
-        /* Some Physics Tests */
+        
+        
+        // Setup Physics //
+        
         self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.size.width, self.size.height)];
         self.physicsBody.dynamic = YES;
-        self.physicsBody.mass = 80;
+        self.physicsBody.mass = 0;
         self.physicsBody.collisionBitMask = 1;
         self.physicsBody.allowsRotation = NO;
     }
@@ -44,8 +39,8 @@
     return self;
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Spin the fish sprite and play SFX */
+-(void)whack {
+    // Spin the fish sprite and play SFX //
     
     if (self.hasActions == NO) {
         [self runAction:[SKAction group:@[actionFishWhack, sfxFishWhack]]];
