@@ -38,7 +38,7 @@
     
     // Setup the Physics //
     
-    self.physicsWorld.gravity = CGVectorMake(0, -6);
+    self.physicsWorld.gravity = CGVectorMake(0, -4);
     
     SKNode *worldBottomBoundryNode = [SKNode node];
     worldBottomBoundryNode.position = CGPointZero;
@@ -56,16 +56,12 @@
     
     // Setup the touch controls //
     
-    isCharacterAccelerating = NO;
-    
-    UILongPressGestureRecognizer *pressDetection = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(userPressedScreen:)];
-    pressDetection.minimumPressDuration = 0.0;
-    [view addGestureRecognizer:pressDetection];
-    
-    
     buttonWhackSpriteNode = [SKSpriteNode spriteNodeWithImageNamed:@"buttonWhack.png"];
     buttonWhackSpriteNode.position = CGPointMake(self.size.width - (buttonWhackSpriteNode.size.width / 2), buttonWhackSpriteNode.size.height / 2);
+    buttonWhackSpriteNode.zPosition = 99;
     [self addChild:buttonWhackSpriteNode];
+    
+    
     
     // Setup the main character fish //
     
@@ -114,17 +110,8 @@
     if ([buttonWhackSpriteNode containsPoint:location]) {
         [characterMain whack];
     } else {
-        NSLog(@"something else tapped");
-    }
-}
-
--(void)userPressedScreen:(UITapGestureRecognizer *)recognizer {
-    if (recognizer.state == UIGestureRecognizerStateBegan) {
-        isCharacterAccelerating = YES;
-    }
-    
-    if (recognizer.state == UIGestureRecognizerStateEnded) {
-        isCharacterAccelerating = NO;
+        [characterMain.physicsBody setVelocity:CGVectorMake(0, 0)];
+        [characterMain.physicsBody applyImpulse:CGVectorMake(150, 300)];
     }
 }
 
@@ -135,28 +122,16 @@
 }
 
 -(void)update:(NSTimeInterval)currentTime {
-    
+
     NSTimeInterval deltaTime = currentTime - lastUpdatedTime;
-    
-    if (isCharacterAccelerating == YES) {
-        characterMain.physicsBody.velocity = CGVectorMake(0, 0);
-        [characterMain.physicsBody applyImpulse:CGVectorMake(9000 * deltaTime, 18000 * deltaTime)];
-        
-        if (self.hasActions == NO) {
-            [self runAction:sfxSwimUp];
-        }
-    }
-    
-    
     lastUpdatedTime = currentTime;
 
     
     
-    // Add new seaweed after 3 seconds //
+    // Add new seaweed after 2-ish seconds //
     
     deltaTimeCounter = deltaTimeCounter + deltaTime;
-    if (deltaTimeCounter > 3) {
-        NSLog(@"New Seaweed");
+    if (deltaTimeCounter > 2) {
         deltaTimeCounter = 0;
         [self addNewSeaweed];
     }
