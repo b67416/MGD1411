@@ -88,7 +88,7 @@
     
     // Preload the SFX //
     
-    sfxSwimUp = [SKAction playSoundFileNamed:@"swim.mp3" waitForCompletion:YES];
+    sfxSwimUp = [SKAction playSoundFileNamed:@"swim.mp3" waitForCompletion:NO];
 }
 
 -(void)addNewSeaweed {
@@ -110,6 +110,7 @@
     if ([buttonWhackSpriteNode containsPoint:location]) {
         [characterMain whack];
     } else {
+        [characterMain runAction:sfxSwimUp];
         [characterMain.physicsBody setVelocity:CGVectorMake(0, 0)];
         [characterMain.physicsBody applyImpulse:CGVectorMake(150, 300)];
     }
@@ -118,7 +119,7 @@
 -(void)didSimulatePhysics {
     // Update the camera to follow the main fish //
     
-    gamePlayNode.position = CGPointMake(100 - characterMain.position.x, 0);
+    gamePlayNode.position = CGPointMake(200 - characterMain.position.x, 0);
 }
 
 -(void)update:(NSTimeInterval)currentTime {
