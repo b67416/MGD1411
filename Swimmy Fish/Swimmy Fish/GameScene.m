@@ -24,6 +24,9 @@
     NSTimeInterval deltaTimeCounter;
     
     SKSpriteNode *buttonWhackSpriteNode;
+    
+    SKSpriteNode *buttonPauseSpriteNode;
+    SKLabelNode *pausedLabelNode;
 }
 
 -(void)didMoveToView:(SKView *)view {
@@ -54,14 +57,27 @@
     
     
     
-    // Setup the touch controls //
+    // Setup the fish whack button //
     
     buttonWhackSpriteNode = [SKSpriteNode spriteNodeWithImageNamed:@"buttonWhack.png"];
-    buttonWhackSpriteNode.position = CGPointMake(self.size.width - (buttonWhackSpriteNode.size.width / 2), buttonWhackSpriteNode.size.height / 2);
+    buttonWhackSpriteNode.position = CGPointMake((buttonWhackSpriteNode.size.width / 2), buttonWhackSpriteNode.size.height / 2);
     buttonWhackSpriteNode.zPosition = 99;
     [self addChild:buttonWhackSpriteNode];
     
+    // Setup the pause button //
+    buttonPauseSpriteNode = [SKSpriteNode spriteNodeWithImageNamed:@"buttonPause.png"];
+    buttonPauseSpriteNode.xScale = .5;
+    buttonPauseSpriteNode.yScale = .5;
+    buttonPauseSpriteNode.alpha = .75;
+    buttonPauseSpriteNode.position = CGPointMake(self.size.width - (buttonPauseSpriteNode.size.width / 2), self.size.height - (buttonPauseSpriteNode.size.height / 2));
+    buttonPauseSpriteNode.zPosition = 99;
+    [self addChild:buttonPauseSpriteNode];
     
+    pausedLabelNode = [SKLabelNode labelNodeWithFontNamed:@"MarkerFelt-Wide"];
+    pausedLabelNode.text = @"Game Paused";
+    pausedLabelNode.fontColor = [SKColor yellowColor];
+    pausedLabelNode.fontSize = 50;
+    pausedLabelNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     
     // Setup the main character fish //
     
@@ -103,16 +119,50 @@
     seaweedCurrentPosition = seaweedCurrentPosition + 400;
 }
 
+-(void)pauseGame:(BOOL)shouldPause {
+    if (shouldPause) {
+        gamePlayNode.paused = YES;
+        gamePlayNode.alpha = .5;
+        
+        self.physicsWorld.speed = 0;
+        
+        [buttonWhackSpriteNode removeFromParent];
+        
+        buttonPauseSpriteNode.alpha = 1;
+        
+        [self addChild:pausedLabelNode];
+    } else {
+        gamePlayNode.paused = NO;
+        gamePlayNode.alpha = 1;
+        
+        self.physicsWorld.speed = 1;
+        
+        [self addChild:buttonWhackSpriteNode];
+        
+        buttonPauseSpriteNode.alpha = .75;
+        
+        [pausedLabelNode removeFromParent];
+    }
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
     
-    if ([buttonWhackSpriteNode containsPoint:location]) {
-        [characterMain whack];
+    if (gamePlayNode.paused) {
+        if ([buttonPauseSpriteNode containsPoint:location]) {
+            [self pauseGame:NO];
+        }
     } else {
-        [characterMain runAction:sfxSwimUp];
-        [characterMain.physicsBody setVelocity:CGVectorMake(0, 0)];
-        [characterMain.physicsBody applyImpulse:CGVectorMake(150, 300)];
+        if ([buttonWhackSpriteNode containsPoint:location]) {
+            [characterMain whack];
+        } else if ([buttonPauseSpriteNode containsPoint:location]) {
+            [self pauseGame:YES];
+        } else {
+            [characterMain runAction:sfxSwimUp];
+            [characterMain.physicsBody setVelocity:CGVectorMake(0, 0)];
+            [characterMain.physicsBody applyImpulse:CGVectorMake(150, 300)];
+        }
     }
 }
 
@@ -130,11 +180,12 @@
     
     
     // Add new seaweed after 2-ish seconds //
-    
+    if (gamePlayNode.paused == NO) {
     deltaTimeCounter = deltaTimeCounter + deltaTime;
-    if (deltaTimeCounter > 2) {
-        deltaTimeCounter = 0;
-        [self addNewSeaweed];
+        if (deltaTimeCounter > 2) {
+            deltaTimeCounter = 0;
+            [self addNewSeaweed];
+        }
     }
 }
 
