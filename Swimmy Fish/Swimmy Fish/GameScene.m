@@ -7,6 +7,7 @@
 //
 
 #import "GameScene.h"
+#import "GameOverScene.h"
 #import "CharacterMain.h"
 #import "Seaweed.h"
 #import "EnemyJellyFish.h"
@@ -41,18 +42,19 @@
     
     // Setup the Physics //
     
+    self.physicsWorld.contactDelegate = self;
     self.physicsWorld.gravity = CGVectorMake(0, -4);
     
     SKNode *worldBottomBoundryNode = [SKNode node];
     worldBottomBoundryNode.position = CGPointZero;
     worldBottomBoundryNode.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 10) toPoint:CGPointMake(self.size.width, 10)];
-    worldBottomBoundryNode.physicsBody.collisionBitMask = 1;
+    worldBottomBoundryNode.physicsBody.categoryBitMask = seaweedCategory;
     [self addChild:worldBottomBoundryNode];
     
     SKNode *worldTopBoundryNode = [SKNode node];
     worldTopBoundryNode.position = CGPointZero;
     worldTopBoundryNode.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, self.size.height - 10) toPoint:CGPointMake(self.size.width, self.size.height - 10)];
-    worldTopBoundryNode.physicsBody.collisionBitMask = 1;
+    worldTopBoundryNode.physicsBody.categoryBitMask = seaweedCategory;
     [self addChild:worldTopBoundryNode];
     
     
@@ -63,6 +65,8 @@
     buttonWhackSpriteNode.position = CGPointMake((buttonWhackSpriteNode.size.width / 2), buttonWhackSpriteNode.size.height / 2);
     buttonWhackSpriteNode.zPosition = 99;
     [self addChild:buttonWhackSpriteNode];
+    
+    
     
     // Setup the pause button //
     buttonPauseSpriteNode = [SKSpriteNode spriteNodeWithImageNamed:@"buttonPause"];
@@ -79,6 +83,8 @@
     pausedLabelNode.fontSize = 50;
     pausedLabelNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     
+    
+    
     // Setup the main character fish //
     
     characterMain = [[CharacterMain alloc] initWithCharacter];
@@ -91,14 +97,6 @@
     
     seaweedCurrentPosition = 0;
     [self addNewSeaweed];
-    
-    
-    
-    // Setup the Enemy Jelly Fish //
-    
-    EnemyJellyFish *enemyJellyFish = [[EnemyJellyFish alloc] initWithJellyFish];
-    enemyJellyFish.position = CGPointMake(500, 250);
-    [gamePlayNode addChild:enemyJellyFish];
     
     
     
@@ -115,6 +113,14 @@
     Seaweed *seaweedTop = [[Seaweed alloc] initWithSeaweedTop];
     seaweedTop.position = CGPointMake(seaweedCurrentPosition + 400, self.view.bounds.size.height - (seaweedTop.size.height / 2));
     [gamePlayNode addChild:seaweedTop];
+    
+    
+    
+    // Setup the Enemy Jelly Fish //
+    
+    EnemyJellyFish *jellyFish = [[EnemyJellyFish alloc] initWithJellyFish];
+    jellyFish.position = CGPointMake(seaweedCurrentPosition + 100, 250);
+    [gamePlayNode addChild:jellyFish];
     
     seaweedCurrentPosition = seaweedCurrentPosition + 400;
 }
@@ -166,6 +172,19 @@
     }
 }
 
+- (void)didBeginContact:(SKPhysicsContact *)contact {
+    if ((contact.bodyA.categoryBitMask == mainCharacterCategory) && (contact.bodyB.categoryBitMask == enemyCategory)) {
+    
+        if (characterMain.hasActions) {
+            EnemyJellyFish *contactedJellyFish = (EnemyJellyFish *)contact.bodyB.node;
+            [contactedJellyFish removeFromParent];
+        } else {
+            // Game Over
+            [self.view presentScene:[GameOverScene sceneWithSize:self.size] transition:[SKTransition doorsCloseHorizontalWithDuration:0.5]];
+        }
+    }
+}
+
 -(void)didSimulatePhysics {
     // Update the camera to follow the main fish //
     
@@ -187,6 +206,8 @@
             [self addNewSeaweed];
         }
     }
+    
+    NSLog(@"update running");
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "EnemyJellyFish.h"
+#import "GameScene.h"
 
 @implementation EnemyJellyFish
 
@@ -21,6 +22,14 @@
     
     
     self = [super initWithTexture:jellyfishFramesArray[0]];
+    
+    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
+    self.physicsBody.categoryBitMask = enemyCategory;
+    self.physicsBody.dynamic = NO;
+    self.physicsBody.mass = 0;
+    self.physicsBody.allowsRotation = NO;
+
+
     
     SKAction *moveDown = [SKAction moveBy:CGVectorMake(0, -100) duration:2];
     SKAction *moveUp = [SKAction moveBy:CGVectorMake(0, 100) duration:2];

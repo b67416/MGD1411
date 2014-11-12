@@ -7,6 +7,7 @@
 //
 
 #import "CharacterMain.h"
+#import "GameScene.h"
 
 @implementation CharacterMain
 {
@@ -29,10 +30,12 @@
         
         // Setup Physics //
         
-        self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.size.width, self.size.height)];
+        self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
         self.physicsBody.dynamic = YES;
         self.physicsBody.mass = 0;
-        self.physicsBody.collisionBitMask = 1;
+        self.physicsBody.categoryBitMask = mainCharacterCategory;
+        self.physicsBody.contactTestBitMask = enemyCategory;
+        self.physicsBody.collisionBitMask = seaweedCategory;
         self.physicsBody.allowsRotation = NO;
     }
     

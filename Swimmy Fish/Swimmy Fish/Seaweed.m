@@ -7,6 +7,7 @@
 //
 
 #import "Seaweed.h"
+#import "GameScene.h"
 
 @implementation Seaweed
 
@@ -28,10 +29,10 @@
     
     // Setup Physics //
     
-    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
     self.physicsBody.dynamic = NO;
     self.physicsBody.mass = 0;
-    self.physicsBody.collisionBitMask = 1;
+    self.physicsBody.categoryBitMask = seaweedCategory;
     self.physicsBody.allowsRotation = NO;
     
     return self;

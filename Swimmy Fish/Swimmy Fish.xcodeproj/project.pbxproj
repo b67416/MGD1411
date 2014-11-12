@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		688683861A12B83900F8EC63 /* GameGraphics.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 688683851A12B83900F8EC63 /* GameGraphics.atlas */; };
+		6889B7311A14259B006C2A4A /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6889B7301A14259B006C2A4A /* GameOverScene.m */; };
 		68A33EFD1A017C0800E60014 /* fishWhack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68A33EFC1A017C0800E60014 /* fishWhack.mp3 */; };
 		68A33F021A017D6D00E60014 /* Seaweed.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A33F011A017D6D00E60014 /* Seaweed.m */; };
 		68A33F051A017F9700E60014 /* EnemyJellyFish.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A33F041A017F9700E60014 /* EnemyJellyFish.m */; };
@@ -35,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		688683851A12B83900F8EC63 /* GameGraphics.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GameGraphics.atlas; sourceTree = "<group>"; };
+		6889B72F1A14259B006C2A4A /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		6889B7301A14259B006C2A4A /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
 		68A33EFC1A017C0800E60014 /* fishWhack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fishWhack.mp3; sourceTree = "<group>"; };
 		68A33F001A017D6D00E60014 /* Seaweed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seaweed.h; sourceTree = "<group>"; };
 		68A33F011A017D6D00E60014 /* Seaweed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaweed.m; sourceTree = "<group>"; };
@@ -94,8 +97,8 @@
 				68A33F011A017D6D00E60014 /* Seaweed.m */,
 				68A33F031A017F9700E60014 /* EnemyJellyFish.h */,
 				68A33F041A017F9700E60014 /* EnemyJellyFish.m */,
-				68FFCF6F1A016DCF00C894F4 /* CharacterMain.m */,
 				68FFCF6E1A016DCF00C894F4 /* CharacterMain.h */,
+				68FFCF6F1A016DCF00C894F4 /* CharacterMain.m */,
 			);
 			name = "Character Class";
 			sourceTree = "<group>";
@@ -105,6 +108,8 @@
 			children = (
 				68FFCF471A01695D00C894F4 /* GameScene.h */,
 				68FFCF481A01695D00C894F4 /* GameScene.m */,
+				6889B72F1A14259B006C2A4A /* GameOverScene.h */,
+				6889B7301A14259B006C2A4A /* GameOverScene.m */,
 			);
 			name = "Game Scenes";
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				68A33F051A017F9700E60014 /* EnemyJellyFish.m in Sources */,
 				68FFCF4E1A01695D00C894F4 /* GameViewController.m in Sources */,
 				68FFCF461A01695D00C894F4 /* AppDelegate.m in Sources */,
+				6889B7311A14259B006C2A4A /* GameOverScene.m in Sources */,
 				68A33F021A017D6D00E60014 /* Seaweed.m in Sources */,
 				68FFCF491A01695D00C894F4 /* GameScene.m in Sources */,
 				68FFCF431A01695D00C894F4 /* main.m in Sources */,
