@@ -20,9 +20,9 @@
 
 - (id)initWithSeaweed:(BOOL)isFlipped {
     if (isFlipped) {
-        self = [super initWithImageNamed:@"Seaweed-Top.png"];
+        self = [super initWithImageNamed:@"Seaweed-Top"];
     } else {
-        self = [super initWithImageNamed:@"Seaweed-Bottom.png"];
+        self = [super initWithImageNamed:@"Seaweed-Bottom"];
     }
     
     

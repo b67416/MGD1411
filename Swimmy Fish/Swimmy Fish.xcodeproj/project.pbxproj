@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		688683861A12B83900F8EC63 /* GameGraphics.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 688683851A12B83900F8EC63 /* GameGraphics.atlas */; };
 		68A33EFD1A017C0800E60014 /* fishWhack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68A33EFC1A017C0800E60014 /* fishWhack.mp3 */; };
 		68A33F021A017D6D00E60014 /* Seaweed.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A33F011A017D6D00E60014 /* Seaweed.m */; };
 		68A33F051A017F9700E60014 /* EnemyJellyFish.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A33F041A017F9700E60014 /* EnemyJellyFish.m */; };
-		68E576F41A11CCD500640AC6 /* PausedScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E576F31A11CCD500640AC6 /* PausedScene.m */; };
 		68FFCF431A01695D00C894F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF421A01695D00C894F4 /* main.m */; };
 		68FFCF461A01695D00C894F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF451A01695D00C894F4 /* AppDelegate.m */; };
 		68FFCF491A01695D00C894F4 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF481A01695D00C894F4 /* GameScene.m */; };
@@ -34,13 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		688683851A12B83900F8EC63 /* GameGraphics.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GameGraphics.atlas; sourceTree = "<group>"; };
 		68A33EFC1A017C0800E60014 /* fishWhack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fishWhack.mp3; sourceTree = "<group>"; };
 		68A33F001A017D6D00E60014 /* Seaweed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seaweed.h; sourceTree = "<group>"; };
 		68A33F011A017D6D00E60014 /* Seaweed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaweed.m; sourceTree = "<group>"; };
 		68A33F031A017F9700E60014 /* EnemyJellyFish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyJellyFish.h; sourceTree = "<group>"; };
 		68A33F041A017F9700E60014 /* EnemyJellyFish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyJellyFish.m; sourceTree = "<group>"; };
-		68E576F21A11CCD500640AC6 /* PausedScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PausedScene.h; sourceTree = "<group>"; };
-		68E576F31A11CCD500640AC6 /* PausedScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PausedScene.m; sourceTree = "<group>"; };
 		68FFCF3D1A01695D00C894F4 /* Swimmy Fish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swimmy Fish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FFCF411A01695D00C894F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68FFCF421A01695D00C894F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,8 +105,6 @@
 			children = (
 				68FFCF471A01695D00C894F4 /* GameScene.h */,
 				68FFCF481A01695D00C894F4 /* GameScene.m */,
-				68E576F21A11CCD500640AC6 /* PausedScene.h */,
-				68E576F31A11CCD500640AC6 /* PausedScene.m */,
 			);
 			name = "Game Scenes";
 			sourceTree = "<group>";
@@ -133,6 +130,7 @@
 		68FFCF3F1A01695D00C894F4 /* Swimmy Fish */ = {
 			isa = PBXGroup;
 			children = (
+				688683851A12B83900F8EC63 /* GameGraphics.atlas */,
 				68FFCF441A01695D00C894F4 /* AppDelegate.h */,
 				68FFCF451A01695D00C894F4 /* AppDelegate.m */,
 				68FFCF4C1A01695D00C894F4 /* GameViewController.h */,
@@ -259,6 +257,7 @@
 				68FFCF561A01695D00C894F4 /* LaunchScreen.xib in Resources */,
 				68FFCF531A01695D00C894F4 /* Images.xcassets in Resources */,
 				68FFCF741A0171D100C894F4 /* swim.mp3 in Resources */,
+				688683861A12B83900F8EC63 /* GameGraphics.atlas in Resources */,
 				68FFCF511A01695D00C894F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +276,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68E576F41A11CCD500640AC6 /* PausedScene.m in Sources */,
 				68A33F051A017F9700E60014 /* EnemyJellyFish.m in Sources */,
 				68FFCF4E1A01695D00C894F4 /* GameViewController.m in Sources */,
 				68FFCF461A01695D00C894F4 /* AppDelegate.m in Sources */,

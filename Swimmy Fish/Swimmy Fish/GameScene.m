@@ -59,13 +59,13 @@
     
     // Setup the fish whack button //
     
-    buttonWhackSpriteNode = [SKSpriteNode spriteNodeWithImageNamed:@"buttonWhack.png"];
+    buttonWhackSpriteNode = [SKSpriteNode spriteNodeWithImageNamed:@"buttonWhack"];
     buttonWhackSpriteNode.position = CGPointMake((buttonWhackSpriteNode.size.width / 2), buttonWhackSpriteNode.size.height / 2);
     buttonWhackSpriteNode.zPosition = 99;
     [self addChild:buttonWhackSpriteNode];
     
     // Setup the pause button //
-    buttonPauseSpriteNode = [SKSpriteNode spriteNodeWithImageNamed:@"buttonPause.png"];
+    buttonPauseSpriteNode = [SKSpriteNode spriteNodeWithImageNamed:@"buttonPause"];
     buttonPauseSpriteNode.xScale = .5;
     buttonPauseSpriteNode.yScale = .5;
     buttonPauseSpriteNode.alpha = .75;
