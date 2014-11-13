@@ -23,7 +23,7 @@
     
     self = [super initWithTexture:jellyfishFramesArray[0]];
     
-    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
+    self.physicsBody = [SKPhysicsBody bodyWithTexture:self.texture size:self.size];
     self.physicsBody.categoryBitMask = enemyCategory;
     self.physicsBody.dynamic = NO;
     self.physicsBody.mass = 0;

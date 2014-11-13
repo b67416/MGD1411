@@ -24,13 +24,13 @@
         actionFishWhack = [SKAction sequence:@[[SKAction scaleXTo:-(self.xScale) duration:.25],
                                                [SKAction scaleXTo:self.xScale duration:.25]]];
                            
-        sfxFishWhack = [SKAction playSoundFileNamed:@"fishWhack.mp3" waitForCompletion:YES];
+        sfxFishWhack = [SKAction playSoundFileNamed:@"fishWhack.mp3" waitForCompletion:NO];
         
         
         
         // Setup Physics //
         
-        self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
+        self.physicsBody = [SKPhysicsBody bodyWithTexture:self.texture size:self.size];
         self.physicsBody.dynamic = YES;
         self.physicsBody.mass = 0;
         self.physicsBody.categoryBitMask = mainCharacterCategory;

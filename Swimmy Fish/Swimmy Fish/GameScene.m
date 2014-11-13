@@ -18,11 +18,7 @@
     CharacterMain *characterMain;
     SKAction *sfxSwimUp;
     
-   // BOOL isCharacterAccelerating;
-    NSTimeInterval lastUpdatedTime;
-    
     NSInteger seaweedCurrentPosition;
-    NSTimeInterval deltaTimeCounter;
     
     SKSpriteNode *buttonWhackSpriteNode;
     
@@ -131,8 +127,6 @@
     [gamePlayNode addChild:jellyFish];
     
     seaweedCurrentPosition = seaweedCurrentPosition + 400;
-    
-    NSLog(@"newSeaweed Created");
 }
 
 -(void)pauseGame:(BOOL)shouldPause {

@@ -29,7 +29,7 @@
     
     // Setup Physics //
     
-    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
+    self.physicsBody = [SKPhysicsBody bodyWithTexture:self.texture size:self.size];
     self.physicsBody.dynamic = NO;
     self.physicsBody.mass = 0;
     self.physicsBody.categoryBitMask = seaweedCategory;
