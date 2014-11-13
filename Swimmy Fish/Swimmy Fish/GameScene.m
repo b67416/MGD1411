@@ -18,7 +18,7 @@
     CharacterMain *characterMain;
     SKAction *sfxSwimUp;
     
-    BOOL isCharacterAccelerating;
+   // BOOL isCharacterAccelerating;
     NSTimeInterval lastUpdatedTime;
     
     NSInteger seaweedCurrentPosition;
@@ -28,6 +28,8 @@
     
     SKSpriteNode *buttonPauseSpriteNode;
     SKLabelNode *pausedLabelNode;
+    
+    NSInteger cameraMovementCounter;
 }
 
 -(void)didMoveToView:(SKView *)view {
@@ -95,10 +97,16 @@
     
     // Setup the seaweed //
     
-    seaweedCurrentPosition = 0;
+    //SKAction *createSeaweed = [SKAction sequence:@[
+    //                                            [SKAction performSelector:@selector(addNewSeaweed) onTarget:self],
+    //                                            [SKAction waitForDuration:2.0]
+    //                                            ]];
+    //[self runAction:[SKAction repeatActionForever:createSeaweed]];
+    
+     seaweedCurrentPosition = 0;
     [self addNewSeaweed];
-    
-    
+    [self addNewSeaweed];
+    [self addNewSeaweed];
     
     // Preload the SFX //
     
@@ -123,6 +131,8 @@
     [gamePlayNode addChild:jellyFish];
     
     seaweedCurrentPosition = seaweedCurrentPosition + 400;
+    
+    NSLog(@"newSeaweed Created");
 }
 
 -(void)pauseGame:(BOOL)shouldPause {
@@ -186,28 +196,22 @@
 }
 
 -(void)didSimulatePhysics {
-    // Update the camera to follow the main fish //
+    // Update the camera to follow the main fish and also spawn new seaweed if the main fish has traveled more than half the screen size //
     
+    NSInteger lastCameraPositionX;
+    NSInteger cameraMovementDifference;
+    
+    lastCameraPositionX = gamePlayNode.position.x;
     gamePlayNode.position = CGPointMake(200 - characterMain.position.x, 0);
-}
-
--(void)update:(NSTimeInterval)currentTime {
-
-    NSTimeInterval deltaTime = currentTime - lastUpdatedTime;
-    lastUpdatedTime = currentTime;
-
     
+    cameraMovementDifference = gamePlayNode.position.x - lastCameraPositionX;
+    cameraMovementCounter = cameraMovementCounter - cameraMovementDifference;
     
-    // Add new seaweed after 2-ish seconds //
-    if (gamePlayNode.paused == NO) {
-    deltaTimeCounter = deltaTimeCounter + deltaTime;
-        if (deltaTimeCounter > 2) {
-            deltaTimeCounter = 0;
-            [self addNewSeaweed];
-        }
+    if (cameraMovementCounter > (self.frame.size.width / 2)) {
+        cameraMovementCounter = 0;
+        [self addNewSeaweed];
     }
-    
-    NSLog(@"update running");
 }
+
 
 @end
