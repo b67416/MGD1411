@@ -7,7 +7,7 @@
 //
 
 #import "GameOverScene.h"
-#import "GameScene.h"
+#import "MainMenuScene.h"
 
 @implementation GameOverScene
 
@@ -18,13 +18,13 @@
     gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     [self addChild:gameOverLabel];
     
-    SKLabelNode *retryLabel = [SKLabelNode labelNodeWithText:@"Touch anywhere to try again!"];
+    SKLabelNode *retryLabel = [SKLabelNode labelNodeWithText:@"Press any touch! :-)"];
     retryLabel.position = CGPointMake(CGRectGetMidX(self.frame), gameOverLabel.position.y - 60);
     [self addChild:retryLabel];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self.view presentScene:[GameScene sceneWithSize:self.size] transition:[SKTransition doorsOpenHorizontalWithDuration:0.5]];
+    [self.view presentScene:[MainMenuScene sceneWithSize:self.size] transition:[SKTransition doorsOpenHorizontalWithDuration:.5]];
 }
 
 @end

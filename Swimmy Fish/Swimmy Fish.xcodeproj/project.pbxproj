@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		681FCFD71A1C191400669673 /* MainMenu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681FCFD61A1C191400669673 /* MainMenu@2x.png */; };
+		681FCFDB1A1C192100669673 /* MainMenu-Credits@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681FCFD81A1C192100669673 /* MainMenu-Credits@2x.png */; };
+		681FCFDC1A1C192100669673 /* MainMenu-Instructions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681FCFD91A1C192100669673 /* MainMenu-Instructions@2x.png */; };
+		681FCFDD1A1C192100669673 /* MainMenu-Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681FCFDA1A1C192100669673 /* MainMenu-Play@2x.png */; };
+		681FCFDF1A1C193800669673 /* Credits@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681FCFDE1A1C193800669673 /* Credits@2x.png */; };
+		681FCFE11A1C194100669673 /* Credits_Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681FCFE01A1C194100669673 /* Credits_Button@2x.png */; };
+		681FCFE41A1C198A00669673 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FCFE31A1C198A00669673 /* MainMenuScene.m */; };
+		681FCFE71A1C47B900669673 /* CreditsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FCFE61A1C47B900669673 /* CreditsScene.m */; };
+		681FCFEA1A1C4D5200669673 /* InstructionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 681FCFE91A1C4D5200669673 /* InstructionsScene.m */; };
+		681FCFED1A1C4DB500669673 /* Instructions@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 681FCFEC1A1C4DB500669673 /* Instructions@2x.png */; };
 		688683861A12B83900F8EC63 /* GameGraphics.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 688683851A12B83900F8EC63 /* GameGraphics.atlas */; };
 		6889B7311A14259B006C2A4A /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 6889B7301A14259B006C2A4A /* GameOverScene.m */; };
 		68A33EFD1A017C0800E60014 /* fishWhack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 68A33EFC1A017C0800E60014 /* fishWhack.mp3 */; };
 		68A33F021A017D6D00E60014 /* Seaweed.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A33F011A017D6D00E60014 /* Seaweed.m */; };
 		68A33F051A017F9700E60014 /* EnemyJellyFish.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A33F041A017F9700E60014 /* EnemyJellyFish.m */; };
+		68ADFDF21A1AF741000678A7 /* SplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 68ADFDF11A1AF741000678A7 /* SplashScreen.png */; };
 		68FFCF431A01695D00C894F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF421A01695D00C894F4 /* main.m */; };
 		68FFCF461A01695D00C894F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF451A01695D00C894F4 /* AppDelegate.m */; };
 		68FFCF491A01695D00C894F4 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFCF481A01695D00C894F4 /* GameScene.m */; };
@@ -35,6 +46,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		681FCFD61A1C191400669673 /* MainMenu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainMenu@2x.png"; sourceTree = "<group>"; };
+		681FCFD81A1C192100669673 /* MainMenu-Credits@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainMenu-Credits@2x.png"; sourceTree = "<group>"; };
+		681FCFD91A1C192100669673 /* MainMenu-Instructions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainMenu-Instructions@2x.png"; sourceTree = "<group>"; };
+		681FCFDA1A1C192100669673 /* MainMenu-Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MainMenu-Play@2x.png"; sourceTree = "<group>"; };
+		681FCFDE1A1C193800669673 /* Credits@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Credits@2x.png"; sourceTree = "<group>"; };
+		681FCFE01A1C194100669673 /* Credits_Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Credits_Button@2x.png"; sourceTree = "<group>"; };
+		681FCFE21A1C198A00669673 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
+		681FCFE31A1C198A00669673 /* MainMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuScene.m; sourceTree = "<group>"; };
+		681FCFE51A1C47B900669673 /* CreditsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditsScene.h; sourceTree = "<group>"; };
+		681FCFE61A1C47B900669673 /* CreditsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditsScene.m; sourceTree = "<group>"; };
+		681FCFE81A1C4D5200669673 /* InstructionsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsScene.h; sourceTree = "<group>"; };
+		681FCFE91A1C4D5200669673 /* InstructionsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsScene.m; sourceTree = "<group>"; };
+		681FCFEC1A1C4DB500669673 /* Instructions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Instructions@2x.png"; sourceTree = "<group>"; };
 		688683851A12B83900F8EC63 /* GameGraphics.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GameGraphics.atlas; sourceTree = "<group>"; };
 		6889B72F1A14259B006C2A4A /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
 		6889B7301A14259B006C2A4A /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverScene.m; sourceTree = "<group>"; };
@@ -43,6 +67,7 @@
 		68A33F011A017D6D00E60014 /* Seaweed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seaweed.m; sourceTree = "<group>"; };
 		68A33F031A017F9700E60014 /* EnemyJellyFish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyJellyFish.h; sourceTree = "<group>"; };
 		68A33F041A017F9700E60014 /* EnemyJellyFish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyJellyFish.m; sourceTree = "<group>"; };
+		68ADFDF11A1AF741000678A7 /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
 		68FFCF3D1A01695D00C894F4 /* Swimmy Fish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swimmy Fish.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		68FFCF411A01695D00C894F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68FFCF421A01695D00C894F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		681FCFEB1A1C4DA000669673 /* Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				681FCFEC1A1C4DB500669673 /* Instructions@2x.png */,
+			);
+			name = Instructions;
+			sourceTree = "<group>";
+		};
 		68A33F061A01AF9F00E60014 /* SFX */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +143,53 @@
 				68FFCF481A01695D00C894F4 /* GameScene.m */,
 				6889B72F1A14259B006C2A4A /* GameOverScene.h */,
 				6889B7301A14259B006C2A4A /* GameOverScene.m */,
+				681FCFE21A1C198A00669673 /* MainMenuScene.h */,
+				681FCFE31A1C198A00669673 /* MainMenuScene.m */,
+				681FCFE51A1C47B900669673 /* CreditsScene.h */,
+				681FCFE61A1C47B900669673 /* CreditsScene.m */,
+				681FCFE81A1C4D5200669673 /* InstructionsScene.h */,
+				681FCFE91A1C4D5200669673 /* InstructionsScene.m */,
 			);
 			name = "Game Scenes";
+			sourceTree = "<group>";
+		};
+		68ADFDF31A1AF747000678A7 /* MenuGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				681FCFEB1A1C4DA000669673 /* Instructions */,
+				68ADFDF61A1AF809000678A7 /* Main Menu */,
+				68ADFDF51A1AF7FC000678A7 /* Credits */,
+				68ADFDF41A1AF7E7000678A7 /* Splash Screen */,
+			);
+			name = MenuGraphics;
+			sourceTree = "<group>";
+		};
+		68ADFDF41A1AF7E7000678A7 /* Splash Screen */ = {
+			isa = PBXGroup;
+			children = (
+				68ADFDF11A1AF741000678A7 /* SplashScreen.png */,
+			);
+			name = "Splash Screen";
+			sourceTree = "<group>";
+		};
+		68ADFDF51A1AF7FC000678A7 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				681FCFE01A1C194100669673 /* Credits_Button@2x.png */,
+				681FCFDE1A1C193800669673 /* Credits@2x.png */,
+			);
+			name = Credits;
+			sourceTree = "<group>";
+		};
+		68ADFDF61A1AF809000678A7 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				681FCFD81A1C192100669673 /* MainMenu-Credits@2x.png */,
+				681FCFD91A1C192100669673 /* MainMenu-Instructions@2x.png */,
+				681FCFDA1A1C192100669673 /* MainMenu-Play@2x.png */,
+				681FCFD61A1C191400669673 /* MainMenu@2x.png */,
+			);
+			name = "Main Menu";
 			sourceTree = "<group>";
 		};
 		68FFCF341A01695D00C894F4 = {
@@ -135,6 +213,7 @@
 		68FFCF3F1A01695D00C894F4 /* Swimmy Fish */ = {
 			isa = PBXGroup;
 			children = (
+				68ADFDF31A1AF747000678A7 /* MenuGraphics */,
 				688683851A12B83900F8EC63 /* GameGraphics.atlas */,
 				68FFCF441A01695D00C894F4 /* AppDelegate.h */,
 				68FFCF451A01695D00C894F4 /* AppDelegate.m */,
@@ -258,11 +337,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681FCFDC1A1C192100669673 /* MainMenu-Instructions@2x.png in Resources */,
 				68A33EFD1A017C0800E60014 /* fishWhack.mp3 in Resources */,
+				681FCFD71A1C191400669673 /* MainMenu@2x.png in Resources */,
+				68ADFDF21A1AF741000678A7 /* SplashScreen.png in Resources */,
+				681FCFDF1A1C193800669673 /* Credits@2x.png in Resources */,
+				681FCFDD1A1C192100669673 /* MainMenu-Play@2x.png in Resources */,
+				681FCFDB1A1C192100669673 /* MainMenu-Credits@2x.png in Resources */,
 				68FFCF561A01695D00C894F4 /* LaunchScreen.xib in Resources */,
 				68FFCF531A01695D00C894F4 /* Images.xcassets in Resources */,
 				68FFCF741A0171D100C894F4 /* swim.mp3 in Resources */,
 				688683861A12B83900F8EC63 /* GameGraphics.atlas in Resources */,
+				681FCFE11A1C194100669673 /* Credits_Button@2x.png in Resources */,
+				681FCFED1A1C4DB500669673 /* Instructions@2x.png in Resources */,
 				68FFCF511A01695D00C894F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,10 +372,13 @@
 				68FFCF4E1A01695D00C894F4 /* GameViewController.m in Sources */,
 				68FFCF461A01695D00C894F4 /* AppDelegate.m in Sources */,
 				6889B7311A14259B006C2A4A /* GameOverScene.m in Sources */,
+				681FCFEA1A1C4D5200669673 /* InstructionsScene.m in Sources */,
 				68A33F021A017D6D00E60014 /* Seaweed.m in Sources */,
 				68FFCF491A01695D00C894F4 /* GameScene.m in Sources */,
 				68FFCF431A01695D00C894F4 /* main.m in Sources */,
+				681FCFE71A1C47B900669673 /* CreditsScene.m in Sources */,
 				68FFCF701A016DCF00C894F4 /* CharacterMain.m in Sources */,
+				681FCFE41A1C198A00669673 /* MainMenuScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

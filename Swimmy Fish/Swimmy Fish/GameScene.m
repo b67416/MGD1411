@@ -99,7 +99,7 @@
     //                                            ]];
     //[self runAction:[SKAction repeatActionForever:createSeaweed]];
     
-     seaweedCurrentPosition = 0;
+    seaweedCurrentPosition = 0;
     [self addNewSeaweed];
     [self addNewSeaweed];
     [self addNewSeaweed];
